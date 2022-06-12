@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Add Home Banner Page SPF Adminpanel" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>ADD HOME BANNER | DASHBOARD | ADMINPANEL | SPF | SHOES FOR MEN</title>
+  </head>
+  <body>
+    <nav>
+      <div class="top-menu">
+        <div class="top-contact">
+          ADMIN PANEL |
+          <a href="signout.html"><i class="fa fa-sign-out"></i> LOGOUT</a>
+        </div>
+        <ul>
+          <li>
+            <a href="../wishlist.html"><i class="fa fa-heart"></i></a>
+          </li>
+          <li>
+            <a href="../cart.html"><i class="fa fa-shopping-cart"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="primary-menu">
+        <!-- <div class="logo">SN</div> -->
+        <ul>
+          <li>
+            <a href="index.html"> <i class="fas fa-cogs"></i> Dashboard</a>
+          </li>
+          <li>
+            <a href="addProduct.html" ><i class="fas fa-plus"></i> Add Product</a
+            >
+          </li>
+          
+          <li>
+            <a href="addHomeBanner.html" class="active"
+              ><i class="fas fa-plus"></i> Add Home Banner</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header>
+      <h1><i class="fas fa-plus"></i> ADD HOME BANNER</h1>
+      <h2>
+        <i class="fa fa-cogs"></i> DASHBOARD / <i class="fas fa-plus"></i> Add
+        HOME BANNER
+      </h2>
+    </header>
+
+    <main>
+        <section id="addHomeBanner">
+          <form id="addHomeBannerForm" >
+          <!-- <form id="addHomeBannerForm" enctype="multipart/form-data"> -->
+            <div id="addHomeBannerMsg"></div>
+
+            <div class="form-group">
+              <input
+                type="file"
+                accept="image/jpeg"
+                name="files"
+                id="addHomeBannerImageFile"
+                onload="showImage()"
+                placeholder="Image File"
+                alt="This is the banner"
+              />
+              <img
+                id="addHomeBannerImageFileOutput"
+                style="width: 100%; height: 100%; margin: 1rem"
+              />
+              <div id="addHomeBannermageFileMsg"></div>
+            </div>
+            <script>
+              function showImage(){
+                  event.preventDefault();
+                  const imageUrl = document.getElementById("addHomeBannerImageFile").files[0];
+                  console.log(imageUrl)
+                  const imageUrlOutput = document.getElementById("addHomeBannerImageFileOutput")
+                  imageUrlOutput.src = imageUrl
+                  imageUrlOutput.alt = "Image URL is not corrct"
+              }
+            </script>
+            <div class="form-group">
+              <input
+                type="text"
+                name="image_url"
+                id="addHomeBannerImageUrl"
+                onchange="showImage()"
+                placeholder="Image URL"
+              />
+              <img
+                id="addHomeBannerImageUrlOutput"
+                style="width: 100%; height: 100%; margin: 1rem"
+              />
+              <div id="addHomeBannermageUrlMsg"></div>
+            </div>
+            <div class="form-group">
+                <input
+                  type="text"
+                  id="addHomeBannerImageAltText"
+                  placeholder="Hero Banner Alt Text"
+                />
+                <div id="addHomeBannerImageAltTextMsg"></div>
+              </div>
+              
+            <script>
+                function showImage(){
+                    event.preventDefault();
+                    const imageUrl = document.getElementById("addHomeBannerImageUrl").value;
+                    const imageUrlOutput = document.getElementById("addHomeBannerImageUrlOutput")
+                    imageUrlOutput.src = imageUrl
+                    imageUrlOutput.alt = "Image URL is not corrct"
+                }
+              </script>
+            <div class="form-group">
+              <button>Add</button>
+            </div>
+          </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social">
+        <img src="images/facebook.png" alt="facebook" />
+        <img src="images/instagram.png" alt="instagram" />
+      </div>
+      <div class="copyrights">Copyrights reserved@2021.</div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="js/Pages/addHomeBanner.js" type="module"></script>
+  </body>
+</html>

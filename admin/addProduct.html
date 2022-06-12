@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Add Product Page SPF Adminpanel" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>ADD PRODUCT | DASHBOARD | ADMINPANEL | SPF | SHOES FOR MEN</title>
+  </head>
+  <body>
+    <nav>
+      <div class="top-menu">
+        <div class="top-contact">
+          ADMIN PANEL |
+          <a href="signout.html"><i class="fa fa-sign-out"></i> LOGOUT</a>
+        </div>
+        <ul>
+          <li>
+            <a href="../wishlist.html"><i class="fa fa-heart"></i></a>
+          </li>
+          <li>
+            <a href="../cart.html"><i class="fa fa-shopping-cart"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="primary-menu">
+        <!-- <div class="logo">SN</div> -->
+        <ul>
+          <li>
+            <a href="index.html"> <i class="fas fa-cogs"></i> Dashboard</a>
+          </li>
+          <li>
+            <a href="addProduct.html" class="active"
+              ><i class="fas fa-plus"></i> Add Product</a
+            >
+          </li>
+          
+          <li>
+            <a href="addHomeBanner.html"
+              ><i class="fas fa-plus"></i> Add Home Banner</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header>
+      <h1><i class="fas fa-plus"></i> ADD PRODUCT</h1>
+      <h2>
+        <i class="fa fa-cogs"></i> DASHBOARD / <i class="fas fa-plus"></i> Add
+        Product
+      </h2>
+    </header>
+
+    <main>
+        <section id="addProduct">
+          <form id="addProductForm" enctype="multipart/form-data">
+            <!-- <form id="editProductForm" > -->
+            <div id="addProductMsg"></div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="title"
+                placeholder="Title"
+                id="addProductTitle"
+              />
+              <div id="addProductTitleMsg"></div>
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="description"
+                id="addProductDescription"
+                placeholder="Description"
+              />
+              <!-- <textarea name="Description" id="editProductDescription" cols="30" rows="10">
+   Description </textarea
+              > -->
+              <div id="addProductDescriptionMsg"></div>
+            </div>
+            <div class="form-group">
+              <input type="number" name="price" placeholder="Price" id="addProductPrice" />
+              <div id="addProductPriceMsg"></div>
+            </div>
+            <!-- <div class="form-group">
+              
+              <input
+                name="image"
+                type="file"
+                accept="image/*"
+                onchange="loadFile(event)"
+                placeholder="Image"
+                id="addProductImageFile"
+              />
+              <img
+                id="addProductImageFileOutput"
+                style="width: 100%; height: 100%; margin: 1rem"
+              />
+              <div id="addProductImageFileMsg"></div>
+            </div> -->
+            <div class="form-group">
+              <input
+                type="text"
+                name="image_url"
+                id="addProductImageUrl"
+                placeholder="Image URL"
+                onchange="showImage()"
+              />
+              
+            <script>
+              function showImage(){
+                  event.preventDefault();
+                  const imageUrl = document.getElementById("addProductImageUrl").value;
+                  const imageUrlOutput = document.getElementById("addProductImageUrlOutput")
+                  imageUrlOutput.src = imageUrl
+                  imageUrlOutput.alt = "Image URL is not corrct"
+              }
+            </script>
+            <img
+            id="addProductImageUrlOutput"
+            style="width: 100%; height: 100%; margin: 1rem"
+          />
+              <div id="addProductImageUrlMsg"></div>
+            </div>
+            <div class="form-group">
+              <input
+                type="checkbox"
+                name="featured"
+                placeholder="Featured"
+                id="addProductFeatured"
+              />
+              <div id="addProductFeatureMsg"></div>
+            </div>
+  
+            <div class="form-group">
+              <button>Add</button>
+            </div>
+          </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social">
+        <img src="images/facebook.png" alt="facebook" />
+        <img src="images/instagram.png" alt="instagram" />
+      </div>
+      <div class="copyrights">Copyrights reserved@2021.</div>
+    </footer>
+    <script src="js/Pages/addProduct.js" type="module"></script>
+  </body>
+</html>

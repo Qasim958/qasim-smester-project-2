@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dashboard Page SPF Adminpanel" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>DASHBOARD | ADMINPANEL | SPF | SHOES FOR MEN</title>
+  </head>
+  <body>
+    <nav>
+      <div class="top-menu">
+        <div class="top-contact">
+          ADMIN PANEL |
+          <a href="signout.html"><i class="fa fa-sign-out"></i> LOGOUT</a>
+        </div>
+        <ul>
+          <li>
+            <a href="../wishlist.html"><i class="fa fa-heart"></i></a>
+          </li>
+          <li>
+            <a href="../cart.html"><i class="fa fa-shopping-cart"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="primary-menu">
+        <!-- <div class="logo">SN</div> -->
+        <ul>
+          <li>
+            <a href="index.html" class="active">
+              <i class="fa fas fa-cogs"></i> Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="addProduct.html"
+              ><i class="fas fas fa-plus"></i> Add Product</a
+            >
+          </li>
+
+          <li>
+            <a href="addHomeBanner.html"
+              ><i class="fas fa-plus"></i> Add Home Banner</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header>
+      <h1><i class="fa fas fa-cogs"></i> DASHBOARD</h1>
+    </header>
+    <main>
+      <section id="productsSetion">
+        <div id="deleteProductMsg"></div>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th><i class="fas fas fa-dollar-sign"></i></th>
+              <th>Featured</th>
+              <th>Image</th>
+              <th>Description</th>
+              <th><i class="fa fa-pencil"></i></th>
+              <th><i class="fa fa-trash"></i></th>
+            </tr>
+          </thead>
+          <tbody id="products"></tbody>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <div class="social">
+        <img src="images/facebook.png" alt="facebook" />
+        <img src="images/instagram.png" alt="instagram" />
+      </div>
+      <div class="copyrights">Copyrights reserved@2021.</div>
+    </footer>
+    <script src="./js/Pages/home.js" type="module"></script>
+  </body>
+</html>
