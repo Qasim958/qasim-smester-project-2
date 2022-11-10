@@ -8,11 +8,14 @@ A simple overview of the use/purpose of the project.
 
 This is an E-commerce project. The site is virtual store made for the users interested in buying shoes. The front end ui is made usng HTML, CSS, Javascript and the backend is a Headless Wordpress CMS API which is deployed on a different server. The frontend code is deployed on github and is being served to the public using Netlify.
 
-You can add some bullet points if you'd like to:
-
-- List item 1
-- List item 2
-- List item 3
+- Repository: 
+```bash
+https://github.com/Qasim958/qasim-smester-project-2
+```
+- Deployed
+```bash
+https://qasim-smesterproject-2.netlify.app
+```
 
 ## Built With
 
@@ -25,10 +28,20 @@ You can list a the tech stack that you've used over here
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
-1. Clone the repo:
+1.  Clone the repo:
 
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
+git clone https://github.com/Qasim958/qasim-smester-project-2.git
 ``` 
+2.  Change directory
+```bash
+cd qasim-smester-project-2
+```   
+4.  Run this command in terminal
+```bash
+npm install
+```
+5.  Run the project
+```bash
+npm start
+```  
