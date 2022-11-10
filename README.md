@@ -1,12 +1,12 @@
-# Your project title
+# Javascript Frameworks CA
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![image](https://qasimnawaz-portfolio.netlify.app/images/sp2.png)
 
 A simple overview of the use/purpose of the project.
 
 ## Description
 
-Add a more detailed description of what your project entails and set out to do.
+This is an E-commerce project. The site is virtual store made for the users interested in buying shoes. The front end ui is made usng HTML, CSS, Javascript and the backend is a Headless Wordpress CMS API which is deployed on a different server. The frontend code is deployed on github and is being served to the public using Netlify.
 
 You can add some bullet points if you'd like to:
 
